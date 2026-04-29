@@ -18,12 +18,12 @@ export function switchTab(tabName, productList) {
             let productImage = document.createElement("img");
             productImage.classList.add("product-image");
             productImage.setAttribute("src", product.image);
-            productCard.appendChild(productImage);
+            productInformation.appendChild(productImage);
 
             let productName = document.createElement("div");
             productName.classList.add("product-name");
             productName.textContent = product.name;
-            productCard.appendChild(productName);
+            productInformation.appendChild(productName);
 
             productName.after(product.description);
 
