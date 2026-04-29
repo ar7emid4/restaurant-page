@@ -1,5 +1,6 @@
 export function switchTab(tabName, productList) {
     let contentDiv = document.querySelector("#content");
+    contentDiv.textContent = "";
 
     let header = document.createElement("h2");
     header.textContent = tabName;
