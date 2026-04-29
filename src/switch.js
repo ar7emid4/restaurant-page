@@ -44,22 +44,30 @@ export function switchTab(tabName, productList) {
 };
 
 function showPopup () {
+    console.log("popup");
     let popupContainer = document.querySelector("#popup-container");
-    popupContainer.addEventListener("click", () => popupContainer.textContent = "")
     popupContainer.textContent = "";
+
+    let popupBackground = document.createElement("div");
+    popupBackground.classList.add("popup-background");
+    popupBackground.addEventListener("click", () => popupContainer.textContent = "");
+    
+    
     let popup = document.createElement("div");
     popup.classList.add("popup");
-
+    popup.addEventListener("click", (event) => event.stopPropagation());
+    popupBackground.appendChild(popup);
 
     let popupHeader = document.createElement("div");
     popupHeader.classList.add("header");
     popup.appendChild(popupHeader);
 
     let popupTitleContainer = document.createElement("div");
+    popupTitleContainer.classList.add("title-container");
     popupHeader.appendChild(popupTitleContainer);
 
     let popupTitle = document.createElement("h2");
-    popupTitle.classList.add("titile");
+    popupTitle.classList.add("title");
     popupTitle.textContent = "What's your address?";
     popupTitleContainer.appendChild(popupTitle);
 
@@ -70,7 +78,7 @@ function showPopup () {
     popupTitleContainer.appendChild(closeButton);
 
     let subtitle = document.createElement("h3");
-    subtitle.classList.add("subtitile");
+    subtitle.classList.add("subtitle");
     subtitle.textContent = "We'll check that you are in the delivery zone and save your address for future orders.";
     popupHeader.appendChild(subtitle);
 
@@ -98,6 +106,7 @@ function showPopup () {
     let popupFooterButton = document.createElement("button");
     popupFooterButton.classList.add("popup-footer-button");
     popupFooterButton.textContent = "Log in"
+    popupFooter.appendChild(popupFooterButton);
 
-    popupContainer.appendChild(popup);
+    popupContainer.appendChild(popupBackground);
 }
