@@ -1,0 +1,135 @@
+body {
+    background-color: white;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    padding: 0px calc(50% - 640px);
+    width: 100%;
+    height: 62px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 6px gray;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav h1 {
+    color: black;
+    font: 700 18px / 1 system-ui;
+    margin-right: 40px;
+}
+
+header nav button {
+    font: 500 14px / 1 system-ui;
+    letter-spacing: -0.14px;
+    padding: 0 40px;
+    color: black;
+    background-color: inherit;
+    border: none;
+}
+
+header nav button:hover {
+    color: rgb(255, 105, 0);
+    cursor: pointer;
+}
+
+header nav button[data-active="true"]{
+    color: rgb(255, 105, 0);
+    font: 700 14px / 18px system-ui;
+}
+
+header > button {
+    background-color: rgb(255, 105, 0);
+    color: rgb(255, 255, 255);
+    padding: 8px 20px;
+    font-size: 16px;
+    line-height: 24px;
+    font: 700 16px / 20px system-ui;
+    border-style: none;
+    border-radius: 9999px;
+}
+
+header > button:hover {
+    background-color: rgb(232, 97, 0);
+    cursor: pointer;
+}
+
+div#content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px calc(50% - 640px);
+}
+
+h2 {
+    width: 100%;
+    font: 700 24px / 28px system-ui;
+    margin: 32px 0px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    width: 22%;
+    margin-right: 3%;
+}
+
+.product-information {
+    width: 100%;
+    font: 500 14px / 18px system-ui;
+    letter-spacing: -0.14px;
+    color: rgb(92, 99, 112);
+}
+
+.product-image {
+    width: 100%;
+}
+
+.product-name {
+    margin: 8px 0px;
+    color: rgb(0, 0, 0);
+    font: 600 20px / 24px system-ui;
+    letter-spacing: -0.32px;
+}
+
+.product-button-container {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.product-button {
+    margin-left: auto;
+    padding: 8px 20px;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: rgb(255, 240, 230);
+    color: rgb(209, 87, 0);
+    min-height: 40px;
+    height: fit-content;
+    font: 600 16px / 20px system-ui;
+    border-style: none;
+    border-radius: 9999px;
+}
+
+.product-card:hover .product-button {
+    background-color: rgb(255, 210, 179);
+    color: rgb(209, 87, 0);
+}
+
+.product-card .product-button:hover {
+    cursor: pointer;
+    background-color: rgb(255, 180, 130);
+    color: rgb(209, 87, 0);
+}
